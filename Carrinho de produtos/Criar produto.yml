@@ -1,0 +1,24 @@
+info:
+  name: Criar produto
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: http://localhost:8080/criar-produto
+  body:
+    type: json
+    data: |-
+      {
+        "nome": "{{$randomCatchPhrase}}",
+        "preco": {{$randomPrice}},
+        "imagemUrl": "{{$randomAvatarImage}}",
+        "descricao": "{{$randomPhrase}}"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
