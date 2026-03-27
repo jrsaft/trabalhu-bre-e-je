@@ -8,7 +8,7 @@ const prisma = new PrismaClient({adapter});
 
 const PORT = 8080;
 
-const app = express();
+const app = express(); 
 
 app.use(cors());
 app.use(express.json())
@@ -31,8 +31,19 @@ app.get('/produtos', async (req, res) => {
 app.post('/adicionar-carrinho/:idProduto', async (req, res) => {
     const id = parseInt(req.params.idProduto);
     const itemCarrinho = await prisma.carrinhoItem.create({data: {produtoId: id}});
-    res.json(itemCarrinho);
+    res.json("Produto adicionado ao carrinho");
 });
+
+app.get('/produtos-carrinho', async (req, res) => {
+    const produtocar = await prisma.carrinhoItem.findMany();
+    res.json(produtocar);
+});
+
+app.delete('/deletar-produto/:idproduto', async (req,res) => {
+    const id = parseInt(req.params.idProduto)
+    const idproduto = await prisma.carrinhoItem.delete({where: { produtoId: id }})
+    res.json("Produto removido do carrinho!")
+})
 
 app.listen(PORT, () => 
     console.log(`Server listening on http://localhost:${PORT}`)
