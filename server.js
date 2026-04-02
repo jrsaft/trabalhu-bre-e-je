@@ -39,9 +39,9 @@ app.get('/produtos-carrinho', async (req, res) => {
     res.json(produtocar);
 });
 
-app.delete('/deletar-produto/:idproduto', async (req,res) => {
+app.delete('/deletar-produto/:idProduto', async (req,res) => {
     const id = parseInt(req.params.idProduto)
-    const idproduto = await prisma.carrinhoItem.delete({where: { produtoId: id }})
+    const idProduto = await prisma.carrinhoItem.deleteMany({where: { produtoId: id }})
     res.json("Produto removido do carrinho!")
 })
 
