@@ -2,13 +2,22 @@
   "name": "12.03.2026",
   "version": "1.0.0",
   "description": "",
+  "homepage": "https://github.com/jrsaft/trabalhu-bre-e-je#readme",
+  "bugs": {
+    "url": "https://github.com/jrsaft/trabalhu-bre-e-je/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jrsaft/trabalhu-bre-e-je.git"
+  },
   "license": "ISC",
   "author": "",
   "type": "module",
   "main": "index.js",
   "scripts": {
     "dev": "node --env-file=.env --watch server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "dependencies": {
     "@prisma/adapter-better-sqlite3": "^7.5.0",
@@ -17,6 +26,7 @@
     "express": "^5.2.1"
   },
   "devDependencies": {
-    "prisma": "^7.5.0"
+    "@types/node": "^25.5.0",
+    "prisma": "^7.6.0"
   }
 }
