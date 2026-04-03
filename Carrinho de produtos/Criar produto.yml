@@ -5,7 +5,7 @@ info:
 
 http:
   method: POST
-  url: http://localhost:8080/criar-produto
+  url: https://trabalhu-bre-e-je.vercel.app/criar-produto
   body:
     type: json
     data: |-

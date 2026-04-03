@@ -5,7 +5,7 @@ info:
 
 http:
   method: POST
-  url: http://localhost:8080/adicionar-carrinho/9
+  url: https://trabalhu-bre-e-je.vercel.app/adicionar-carrinho/9
   auth: inherit
 
 settings:

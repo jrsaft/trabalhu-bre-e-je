@@ -5,7 +5,7 @@ info:
 
 http:
   method: GET
-  url: http://localhost:8080/produtos
+  url: https://trabalhu-bre-e-je.vercel.app/produtos
   auth: inherit
 
 settings:

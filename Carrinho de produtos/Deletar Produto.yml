@@ -5,7 +5,7 @@ info:
 
 http:
   method: DELETE
-  url: http://localhost:8080/deletar-produto/2
+  url: http://trabalhu-bre-e-je.vercel.app/deletar-produto/2
   auth: inherit
 
 settings:
