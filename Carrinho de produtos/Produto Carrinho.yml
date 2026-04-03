@@ -1,11 +1,11 @@
 info:
-  name: Adicionar produto
+  name: Produto Carrinho
   type: http
-  seq: 3
+  seq: 5
 
 http:
-  method: POST
-  url: http://localhost:8080/adicionar-carrinho/9
+  method: GET
+  url: http://localhost:8080/produtos-carrinho
   auth: inherit
 
 settings:

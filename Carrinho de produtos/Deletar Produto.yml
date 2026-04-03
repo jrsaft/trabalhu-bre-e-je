@@ -1,11 +1,11 @@
 info:
-  name: Adicionar produto
+  name: Deletar Produto
   type: http
-  seq: 3
+  seq: 4
 
 http:
-  method: POST
-  url: http://localhost:8080/adicionar-carrinho/9
+  method: DELETE
+  url: http://localhost:8080/deletar-produto/2
   auth: inherit
 
 settings:
